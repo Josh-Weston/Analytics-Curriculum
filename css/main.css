@@ -1,0 +1,74 @@
+:root {
+    --orange: #E56C0A;
+    --font-family: "Roboto", "Arial", sans-serif;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+#top-bar {
+    background-color: #FaFaFb;
+    border-top: 3px solid var(--orange);
+    height: 50px;
+    width: 100%;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, .26);
+    min-width: 1060px;
+}
+
+#top-bar-inner {
+    width: 1060px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.unstyle-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#top-bar-link-container {
+    display: inline-block;
+}
+
+#top-bar-links > li {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 50px;
+    font-family: var(--font-family);
+    color: #707070;
+    font-weight: bold;
+    padding: 0px 20px 0px 20px;
+    transition: background-color .2s ease;
+}
+
+/* TODO: Mousehover not working on objects. May need to replace objects with
+just the SVG code */
+.unstyle-list > li:hover {
+    cursor: pointer;
+    background-color: #eff0f1;
+}
+
+#top-bar-icon-container {
+    float: right;
+    height: 100%;
+}
+
+/* TODO: Fix height here */
+#top-bar-icon-list > li {
+    display: inline-block;
+    font-family: var(--font-family);
+    text-align: center;
+    transition: background-color .2s ease;
+    height: 50px;
+    width: 50px;
+    transition: background-color .2s ease;
+}
+
+#top-bar-icon-list > li > object {
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
