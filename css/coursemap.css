@@ -1,0 +1,100 @@
+#coursemap-svg {
+    height: 100%;
+    width: 1200px;
+    padding: 10px;
+}
+
+.path-complete {
+    transition: all .3s ease;
+    transform-origin: 100px 20px; /*This is a hack, but I'm not sure how else to accomplish this */
+}
+
+.path-complete:hover {
+    cursor:pointer;
+    transform: scale(1.1);
+    filter: url(#filter-2);
+}
+
+.course-node-incomplete {
+    stroke-width: 2px;
+    stroke: white;
+    fill: none;
+}
+
+.course-node-complete {
+    fill: white;
+}
+
+/* How to animate each node */
+/* This is the same positioning as our circles */
+/* #di101g {
+    transform-origin: 466px 99.5px; 
+    transition: all .5s ease;
+} */
+
+g.course-node:hover {
+    cursor: default;
+}
+
+g.course-node foreignobject {
+    opacity: 0;
+    display: none;
+    transition: opacity .5s ease;
+    overflow: visible;
+}
+
+.registration-open {
+    fill: white;
+    font-size: 8px;
+}
+
+g.course-node:hover foreignobject {
+    display: block;
+    animation: manualopacity .5s ease-in forwards;
+}
+
+.course-tooltip {
+    display: none;
+}
+
+/* Required because display trumps the opacity */
+@keyframes manualopacity{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .95;
+    }
+}
+
+.course-tooltip--arrow {
+    display: block;
+    width: .8rem;
+    height: .4rem;
+    border-color: transparent;
+    border-style: solid;
+    bottom: 0;
+    border-width: 0 .4rem .4rem;
+    border-bottom-color: #343537;
+    margin: 0 auto;
+}
+
+.course-tooltip--body {
+    max-width: 200px;
+    padding: .25rem .5rem;
+    color: #fff;
+    background-color: #343537;
+    border-radius: .25rem;
+    font-size: 10px;
+    padding: 10px;
+}
+
+.course-tooltip-button--align {
+    text-align: right;
+}
+
+.course-tooltip-button {
+    font-size: 10px;
+    border-radius: 2px;
+    padding: 2px 6px 2px 6px;
+}

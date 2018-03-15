@@ -1,0 +1,19 @@
+"{title: 'someTitle',
+  subtitle: 'Brief description of the course'
+  overview: 'Overview of the course'
+  format: 'workshop',
+  prerequisites: [],
+  Objectives: [],
+  Path: 'Consumer Level and 2'
+  Learning Blocks: [{}, {}, {}]
+  Skills: [
+      {projectManagement: 1,
+       industryKnowledge: 2
+      }
+    ]
+  Challenges: [{
+      'Name': ""
+      'Challenge': ""
+      'Answer': "
+    }]
+}"
