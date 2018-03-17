@@ -110,7 +110,7 @@ just the SVG code */
 .main-container-avatar {
     height: 132px;
     width: 140px;
-    transition: transform .15s ease-in-out;
+    transition: transform .15s ease-in-out, opacity .2s ease-in;
 }
 
 .main-container-avatar:hover {
@@ -118,20 +118,26 @@ just the SVG code */
     transform: scale(1.2); /*TODO: Make the other avatar scale down as well, do we don't take-up so much space */
 }
 
+.main-container-avatar--notselected {
+    opacity: .2;
+}
+
 #main-container-signup {
     width: 295px;
     padding-top: 10%;
     text-align: center;
-    display: inline-block;
     border: 1px solid red;
     vertical-align: top;
     height: 100%;
+    display:none;
 }
 
 #main-container-signup > span {
     margin-top: 20px;
     margin-bottom: 20px;
     display: inline-block;
+    font-family: 'Pacifico', cursive;
+    font-size: 32px;
 }
 
 #main-container-svg {

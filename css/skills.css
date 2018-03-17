@@ -15,7 +15,7 @@
     width: 0;
 }
 
-#flex-container-toc > div:first-child {
+#flex-container-toc > .section-header {
     background-color: #dfdfe1;
     line-height: 36px;
     font-size: 18px;

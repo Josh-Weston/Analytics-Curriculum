@@ -7,6 +7,8 @@
         <link href="./css/skills.css" rel="stylesheet" type="text/css">
         <link href="./css/coursemap.css" rel="stylesheet" type="text/css">
         <link href="./css/courseTemplate.css" rel="stylesheet" type="text/css">
+        <link href="./css/challenges.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
         <script src="./js/libs/jquery-3.3.1.min.js" type="text/javascript"></script>
         <script src="./js/libs/bootstrap.bundle.min.js" type="text/javascript"></script>
     </head>
@@ -14,7 +16,7 @@
     <body>
         <div id="top-bar">
             <div id="top-bar-inner">
-                <div id="top-bar-link-container" data-toggle="tooltip" title="Here is a super long description about something and here it is and it is long and wide and long.">
+                <div id="top-bar-link-container">
                     <!-- Add Logo Here -->
                     <ul class="unstyle-list" id="top-bar-links">
                         <li data-headerlink="coursemap">
@@ -23,48 +25,79 @@
                         <li data-headerlink="skills">
                             Find a skill
                         </li>
-                        <li data-headerlink="catalog">
-                            Browse Catalog
-                        </li>
                         <li data-headerlink="schedule">
                             <span class="comingsoon">COMING SOON</span>
                             Schedule
                         </li>
-                        <li data-headerlink="forum">
-                            <span class="comingsoon">COMING SOON</span>
-                            Forum
-                        </li>
                         <li data-headerlink="challenges">
-                            <span class="comingsoon">COMING SOON</span>
                             Challenges
                         </li>
-                        <li data-headerlink="courseTemplate">
-                            <span class="comingsoon">COMING SOON</span>
-                            Course Template
+                        <li data-headerlink="forum">
+                                <span class="comingsoon">COMING SOON</span>
+                                Forum
+                        </li>
+                        <li data-headerlink="forum">
+                                <span class="comingsoon">COMING SOON</span>
+                                Get Involved!
                         </li>
                     </ul>
                 </div>
                 <div id="top-bar-icon-container">
                     <ul class="unstyle-list" id="top-bar-icon-list">
-                        <li><object class="top-icon" type="image/svg+xml" data="./img/ic_face_black_24px.svg"></object></li>
-                        <li><object class="top-icon" type="image/svg+xml" data="./img/ic_inbox_black_24px.svg"></object></li>
-                        <li><object class="top-icon" type="image/svg+xml" data="./img/ic_loyalty_black_24px.svg"></object></li>
-                        <li><object class="top-icon" type="image/svg+xml" data="./img/ic_shopping_cart_black_24px.svg"></object></li>
+                        <!-- TODO: These should be embedded SVG so we can make changes to appearance -->
+                        <li><object class="top-icon" type="image/svg+xml" data-toggle="tooltip" title="Your Profile" data="./img/ic_face_black_24px.svg"></object></li>
+                        <li><object class="top-icon" type="image/svg+xml" data-toggle="tooltip" title="Your Messages" data="./img/ic_inbox_black_24px.svg"></object></li>
+                        <li><object class="top-icon" type="image/svg+xml" data-toggle="tooltip" title="Your Points" data="./img/ic_loyalty_black_24px.svg"></object></li>
+                        <li><object class="top-icon" type="image/svg+xml" data-toggle="tooltip" title="Redeem Points" data="./img/ic_shopping_cart_black_24px.svg"></object></li>
                     </ul>
                 </div>
                 </div>
             </div>
         </div>
         <div id="main-container-spacer"></div>
+        <div class="modal fade" id="information-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Welcome back!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-message">
+                        <img class="main-container-avatar" src="./img/avatar_male.svg">
+                        Welcome back, bro! Let's do some work!
+                    </div>
+                    <div class="modal-message-content">
+                        <div class="radio">
+                                <label><input type="radio" name="optradio">Option 1</label>
+                                </div>
+                                <div class="radio">
+                                <label><input type="radio" name="optradio">Option 2</label>
+                                </div>
+                                <div class="radio disabled">
+                                <label><input type="radio" name="optradio" disabled>Option 3</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Not right now</button>
+                    <button type="button" class="btn btn-primary">Submit Answer</button>
+                </div>
+                </div>
+            </div>
+        </div>
         <div id="main-container">
             <div id="main-container-illustration">
                 <div id="main-container-signup">
-                        <img class="main-container-avatar" src="./img/avatar_male.svg">
-                        <img class="main-container-avatar" src="./img/avatar_female.svg">
+                        <img class="main-container-avatar" data-avatar="male" data-toggle="tooltip" title="We are going straight to the top. Nothing is going to stop us!" src="./img/avatar_male.svg">
+                        <img class="main-container-avatar" data-avatar="female" data-toggle="tooltip" title="Mastering analaytics with me is easy! Let's do this!" src="./img/avatar_female.svg">
                         <span>Choose your explorer and </span>
                         <button type="button" class="btn btn-primary">Start your analytics adventure!</button>
                 </div><div id="main-container-svg">
-                        <svg style="height: 580px; width: 895px">
+                    <!-- TODO: Build it in PhotoShop and retrofit it. It is a pain in the ass, but it is easier! -->
+                        <svg id="svg-mountain-parent" style="height: 580px; width: 895px">
                                 <!-- With the filter we can apply to individual elements! -->
                                 <filter id="dropshadow" height="130%">
                                         <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->

@@ -1,12 +1,33 @@
 console.log(navigator.userAgent); //TODO: Parse out Chrome
 
-
-
 class VM {
 
+    constructor(gui) {
+        this.gui = gui;
+        this.fetchProfile(true);
 
+        if (navigator.userAgent.indexOf('Chrome/') < 0) {
+            this.gui.showBrowserWarning();
+        }
+    }
 
+    fetchProfile(profileExists) {
+        if (profileExists) {
+            this.gui.removeSignup();
+            this.gui.welcomeBack();
+        } else {
+            this.gui.showSignup();
+        }
+        
+    }
 
+    saveProfileChanges() {
+
+    }
+
+    signup() {
+
+    }
 
 }
 
@@ -16,19 +37,30 @@ class GUI {
 
     //Mostly for binding event listeners.
     constructor() {
+    
         this.svgDrag = {
             active: false,
             lastX: undefined,
             lastY: undefined
         };
 
+        $('[data-toggle="tooltip"]').tooltip();
+
         document.addEventListener('click', e => {
+
+            //TODO: This needs to be more robust because the event
+            //won't fire if the user clicks on text.
             switch (Object.keys(e.target.dataset)[0]) {
                 case 'headerlink':
                     this.changeView(e.target.dataset['headerlink']);
                     break;
                 case 'courseview':
                     this.changeView('courseTemplate', e.target.dataset['courseview']);
+                    break;
+                case 'skillsview':
+                    this.changeView('skills');
+                case 'avatar':
+                    this.selectAvatar(e.target);
                     break;
             }
         });
@@ -71,6 +103,29 @@ class GUI {
             }
         });
 
+    }
+
+    //TODO: These modal messages need to be a separate object for simplicity
+    welcomeBack() {
+        $('#information-modal').modal('show');
+    }
+
+    showBrowserWarning() {
+        //TODO: Pass it browser specific message here.
+        //Dang! I see your browser isn't Chrome, but this site is build on latest
+        //HTMl 5.0 features. If this becomes an issue, we will make the site 
+        //cross browser compatible, but for now I suggest firing up Chrome
+        $('#information-modal').modal('show');
+    }
+
+    selectAvatar(target) {
+        document.querySelectorAll('.main-container-avatar').forEach(avatar => {
+            if (avatar === target) {
+                avatar.classList.remove('main-container-avatar--notselected');
+            } else {
+                avatar.classList.add('main-container-avatar--notselected');
+            }
+        });
     }
 
     zoomCourseMap(courseMapSVG, zoomIn) {
@@ -118,6 +173,27 @@ class GUI {
             });
         });
     }
+
+    /* Will receive instructions for what components are required */
+    /* Body should be padded into this */
+    buildModal() {
+
+    }
+
+    removeSignup() {
+        const signup = document.querySelector('#main-container-signup');
+        document.querySelector('#main-container-illustration').removeChild(signup);
+        document.querySelector('#main-container-svg').style.width = "1200px";
+        document.querySelector('#svg-mountain-parent').style.width = "1200px";
+    }
+
+    showSignup() {
+        const signup = document.querySelector('#main-container-signup');
+        signup.style.display = "inline-block";
+    }
 }
 
+/* Instantiate for loose coupling */
 var gui = new GUI();
+var vm = new VM(gui);
+gui.vm = vm;

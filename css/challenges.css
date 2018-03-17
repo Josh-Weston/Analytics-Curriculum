@@ -1,0 +1,19 @@
+#challenges-container {
+    margin-top: 50px;
+}
+
+#challenges-container-scrollable {
+    overflow-x: auto;
+}
+
+#challenges-container-list {
+    white-space: nowrap;
+}
+
+#challenges-container-list li {
+    height: 450px;
+    width: 275px;
+    display: inline-block;
+    border: 1px solid black;
+    background-color: teal;
+}
