@@ -4,7 +4,7 @@ class VM {
 
     constructor(gui) {
         this.gui = gui;
-        this.fetchProfile(true);
+        this.fetchProfile(false);
 
         if (navigator.userAgent.indexOf('Chrome/') < 0) {
             this.gui.showBrowserWarning();
@@ -35,73 +35,20 @@ class VM {
 /* TODO: need to create routing with #'s */
 class GUI {
 
-    //Mostly for binding event listeners.
-    constructor() {
-    
-        this.svgDrag = {
-            active: false,
-            lastX: undefined,
-            lastY: undefined
-        };
+    constructor(eventGateway) {
+
+        this.eventGateway = eventGateway;
+        this.eventGateway.addListener('changeView', data => this.changeView(data));
+        this.eventGateway.addListener('selectAvatar', data => this.selectAvatar(data));
 
         $('[data-toggle="tooltip"]').tooltip();
 
-        document.addEventListener('click', e => {
 
-            //TODO: This needs to be more robust because the event
-            //won't fire if the user clicks on text.
-            switch (Object.keys(e.target.dataset)[0]) {
-                case 'headerlink':
-                    this.changeView(e.target.dataset['headerlink']);
-                    break;
-                case 'courseview':
-                    this.changeView('courseTemplate', e.target.dataset['courseview']);
-                    break;
-                case 'skillsview':
-                    this.changeView('skills');
-                case 'avatar':
-                    this.selectAvatar(e.target);
-                    break;
-            }
-        });
-
-        document.addEventListener('wheel', e => {
-            let courseMap = document.querySelector('#coursemap-svg');
-            if (e.path.find(el => el === courseMap)) {
-                this.zoomCourseMap(courseMap, e.wheelDelta > 0);
-                e.preventDefault();
-            } 
-        });
-
-        document.addEventListener('dblclick', e => {
-            let courseMap = document.querySelector('#coursemap-svg');
-                if (e.path.find(el => el === courseMap)) {
-                    this.zoomCourseMap(courseMap, true);
-                }
-        });
-
-        document.addEventListener('mousedown', e => {
-            let courseMap = document.querySelector('#coursemap-svg');
-            if (e.path.find(el => el === courseMap)) {
-                this.svgDrag.active = true;
-                this.svgDrag.lastX = e.offsetX;
-                this.svgDrag.lastY = e.offsetY;
-                e.preventDefault();
-            } else {
-                this.svgDrag.active = false;
-            }
-        });
-
-        document.addEventListener('mouseup', e => {
-            this.svgDrag.active = false;
-        });
-
-        document.addEventListener('mousemove', e => {
-            let courseMap = document.querySelector('#coursemap-svg');
-            if (e.path.find(el => el === courseMap) && this.svgDrag.active === true) {
-                this.dragCourseMap(courseMap, e.offsetX, e.offsetY);
-            }
-        });
+        document.querySelectorAll('.registration-details').forEach(el => {
+            el.addEventListener('click', e => {
+                console.log(e.target);
+            });
+        }); 
 
     }
 
@@ -128,34 +75,6 @@ class GUI {
         });
     }
 
-    zoomCourseMap(courseMapSVG, zoomIn) {
-        let viewBox = courseMapSVG.getAttribute('viewBox').split(' '),
-            viewBoxOld = Array.from(viewBox),
-            increment = .05;
-
-        if (zoomIn) {
-            viewBox[2] *= (1 - increment);
-            viewBox[3] *= (1 - increment);
-        } else {
-            viewBox[2] *= (1 + increment);
-            viewBox[3] *= (1 + increment);
-        }
-
-        //TODO: If I want animation, I will need to manually call requestanimationframe.
-        courseMapSVG.setAttribute('viewBox', viewBox.join(' '));
-
-    }
-
-    dragCourseMap(courseMapSVG, offsetX, offsetY) {
-        let viewBox = courseMapSVG.getAttribute('viewBox').split(' '),
-            sensitivity = 20;
-
-        viewBox = viewBox.map(num => +num); 
-        viewBox[0] += Math.ceil(((offsetX - this.svgDrag.lastX)*-1)/sensitivity); //Invert for desired effect
-        viewBox[1] += Math.ceil(((offsetY - this.svgDrag.lastY)*-1)/sensitivity); //Invert for desired effect
-        courseMapSVG.setAttribute('viewBox', viewBox.join(' '));
-    }
-
     changeView(viewName, params) {
         let mainContainer = document.querySelector('#main-container');
         mainContainer.style.opacity = 0;
@@ -175,7 +94,7 @@ class GUI {
     }
 
     /* Will receive instructions for what components are required */
-    /* Body should be padded into this */
+    /* Body should be passed into this */
     buildModal() {
 
     }
@@ -193,7 +112,15 @@ class GUI {
     }
 }
 
-/* Instantiate for loose coupling */
-var gui = new GUI();
+import {EventGateway} from './eventgateway.js';
+import {CourseMap} from './coursemap.js';
+import {Schedule} from './schedule.js';
+
+let gateway = new EventGateway();
+var gui = new GUI(gateway);
 var vm = new VM(gui);
 gui.vm = vm;
+
+let courseMap = new CourseMap(gateway);
+let schedule = new Schedule(gateway);
+

@@ -159,3 +159,9 @@ just the SVG code */
 #mountain-2 {
     transform: translate(50px, 80px);
 }
+
+#landing-stats {
+    height: 300px;
+    width: 100%;
+    background-color: rgb(10, 10, 10);
+}

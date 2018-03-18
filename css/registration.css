@@ -1,0 +1,115 @@
+.registration-card {
+    width: 700px;
+    margin: 0 auto;
+    box-shadow: 1px 2px 5px 0px rgba(0,0,0,.2);
+    padding: 10px 20px 10px 20px;
+    margin-top: 50px;
+}
+
+.registration-logo {
+    padding: 25px 4px 15px;
+    width: 77px;
+    height: 77px;
+    background: rgba(50,56,64,.65);
+    float: left;
+    margin-top: 0;
+    margin-right: 14px;
+    border-radius: 50%;
+}
+
+.registration-date {
+    color: #15c2e0;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+h2.registration-name {
+    color: #515151;
+    font-weight: 700;
+    font-size: 42px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.registration-button {
+    float: right;
+}
+
+.registration-details {
+    padding-left: 92px;
+    color: #00c0a5;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.registration-arrow {
+    border: solid #00c0a5;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transition: transform .25s ease;
+    vertical-align: middle;
+    margin-right: 5px;
+    transform: translate(0px, -2px) rotate(45deg);
+}
+
+.registration-arrow--up {
+    transform: rotate(-135deg);
+}
+
+.registration-time {
+    width: 15%;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.registration-detail-container {
+    margin-top: 20px;
+    max-height: 0px;
+    transition: max-height .3s ease;
+    overflow: hidden;
+}
+
+.registration-detail-container--open {
+    max-height: 1000px;
+}
+
+.registration-detail-container li {
+    border-bottom: 1px solid #e7e7e7;
+    padding-bottom: 7px;
+    margin-top: 7px;
+    width: 100%;
+}
+
+.registration-block {
+    font-weight: bold;
+    color: #5a5d75;
+    border-left: 2px solid #5a5d75;
+    background: #e9eaed;
+    width: 83%;
+    display: inline-block;
+    padding: 14px;
+    vertical-align: middle;
+}
+
+.registration-block--img {
+    background: rgba(90,93,117,.32);
+    margin-left: 14px;
+    width: 56px;
+    height: 56px;
+    float: left;
+    padding: 14px;
+    margin-top: 0;
+    margin-right: 14px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.registration-block--text {
+    vertical-align: middle;
+}
