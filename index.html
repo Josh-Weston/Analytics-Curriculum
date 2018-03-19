@@ -99,28 +99,160 @@
                         <button type="button" class="btn btn-primary">Start your analytics adventure!</button>
                 </div><div id="main-container-svg">
                     <!-- TODO: Build it in PhotoShop and retrofit it. It is a pain in the ass, but it is easier! -->
-                        <svg id="svg-mountain-parent" style="height: 580px; width: 895px">
-                                <!-- With the filter we can apply to individual elements! -->
-                                <filter id="dropshadow" height="130%">
-                                        <feGaussianBlur in="SourceAlpha" stdDeviation="3"/> <!-- stdDeviation is how much to blur -->
-                                        <feOffset dx="2" dy="2" result="offsetblur"/> <!-- how much to offset -->
-                                        <feComponentTransfer>
-                                          <feFuncA type="linear" slope="0.5"/> <!-- slope is the opacity of the shadow -->
-                                        </feComponentTransfer>
-                                        <feMerge> 
-                                          <feMergeNode/> <!-- this contains the offset blurred image -->
-                                          <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
-                                        </feMerge>
-                                </filter>
-                                <g id="mountain-2">
-                                        <path class="svg-mountains" filter="url(#dropshadow)" d="M-0,343 L194.407,0.759 L393.593,340.241 L-0.000,340.241 Z"></path>
-                                </g>
-                                <g id="mountain-1">
-                                    <path class="svg-mountains" filter="url(#dropshadow)" d="M-0,343 L194.407,0.759 L393.593,340.241 L-0.000,340.241 Z"></path>
-                                </g>
-    
-                        </svg>
-
+                    <div id="main-container-svg-flex">
+                        <svg width="900" height="600" viewBox="0 0 900 600">
+                                <defs>
+                                        <style>
+                                          .cls-1 {
+                                            fill: #aedee6;
+                                          }
+                                    
+                                          .cls-1, .cls-10, .cls-11, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9 {
+                                            fill-rule: evenodd;
+                                          }
+                                    
+                                          .cls-2 {
+                                            font-size: 11px;
+                                            fill: #001026;
+                                            font-family: JohnDoe; /*TODO: This only works because it is on my system */
+                                            font-weight: 700;
+                                          }
+                                    
+                                          .cls-3 {
+                                            fill: #005336;
+                                            filter: url(#filter);
+                                          }
+                                    
+                                          .cls-4 {
+                                            fill: #1d4979;
+                                            filter: url(#filter-2);
+                                          }
+                                    
+                                          .cls-5 {
+                                            fill: #376092;
+                                            filter: url(#filter-3);
+                                          }
+                                    
+                                          .cls-6 {
+                                            fill: #c65100;
+                                            filter: url(#filter-4);
+                                          }
+                                    
+                                          .cls-7 {
+                                            fill: #e56c0a;
+                                            filter: url(#filter-5);
+                                          }
+                                    
+                                          .cls-8 {
+                                            fill: #781c1f;
+                                            filter: url(#filter-6);
+                                          }
+                                    
+                                          .cls-9 {
+                                            fill: #953735;
+                                            filter: url(#filter-7);
+                                          }
+                                    
+                                          .cls-10, .cls-11 {
+                                            fill: #afdee6;
+                                          }
+                                    
+                                          .cls-10 {
+                                            opacity: 0.8;
+                                          }
+                                    
+                                          .cls-12, .cls-13 {
+                                            font-size: 10px;
+                                            fill: #fff;
+                                            font-family: "Arial", sans-serif;
+                                          }
+                                    
+                                          .cls-12 {
+                                            text-anchor: middle;
+                                          }
+                                        </style>
+                                        <filter id="filter" x="437" y="26" width="452" height="396" filterUnits="userSpaceOnUse">
+                                          <feOffset result="offset" dx="2" in="SourceAlpha"/>
+                                          <feGaussianBlur result="blur" stdDeviation="2.236"/>
+                                          <feFlood result="flood" flood-opacity="0.35"/>
+                                          <feComposite result="composite" operator="in" in2="blur"/>
+                                          <feBlend result="blend" in="SourceGraphic"/>
+                                        </filter>
+                                        <filter id="filter-2" x="365" y="103" width="399" height="350" filterUnits="userSpaceOnUse">
+                                          <feOffset result="offset" dx="2" in="SourceAlpha"/>
+                                          <feGaussianBlur result="blur" stdDeviation="2.236"/>
+                                          <feFlood result="flood" flood-opacity="0.35"/>
+                                          <feComposite result="composite" operator="in" in2="blur"/>
+                                          <feBlend result="blend" in="SourceGraphic"/>
+                                        </filter>
+                                        <filter id="filter-3" x="283" y="194" width="340" height="298" filterUnits="userSpaceOnUse">
+                                          <feOffset result="offset" dx="2" in="SourceAlpha"/>
+                                          <feGaussianBlur result="blur" stdDeviation="2.236"/>
+                                          <feFlood result="flood" flood-opacity="0.35"/>
+                                          <feComposite result="composite" operator="in" in2="blur"/>
+                                          <feBlend result="blend" in="SourceGraphic"/>
+                                        </filter>
+                                        <filter id="filter-4" x="216" y="269" width="284" height="249" filterUnits="userSpaceOnUse">
+                                          <feOffset result="offset" dx="2" in="SourceAlpha"/>
+                                          <feGaussianBlur result="blur" stdDeviation="2.236"/>
+                                          <feFlood result="flood" flood-opacity="0.35"/>
+                                          <feComposite result="composite" operator="in" in2="blur"/>
+                                          <feBlend result="blend" in="SourceGraphic"/>
+                                        </filter>
+                                        <filter id="filter-5" x="155" y="329" width="241" height="211" filterUnits="userSpaceOnUse">
+                                          <feOffset result="offset" dx="2" in="SourceAlpha"/>
+                                          <feGaussianBlur result="blur" stdDeviation="2.236"/>
+                                          <feFlood result="flood" flood-opacity="0.35"/>
+                                          <feComposite result="composite" operator="in" in2="blur"/>
+                                          <feBlend result="blend" in="SourceGraphic"/>
+                                        </filter>
+                                        <filter id="filter-6" x="98" y="388" width="200" height="175" filterUnits="userSpaceOnUse">
+                                          <feOffset result="offset" dx="2" in="SourceAlpha"/>
+                                          <feGaussianBlur result="blur" stdDeviation="2.236"/>
+                                          <feFlood result="flood" flood-opacity="0.35"/>
+                                          <feComposite result="composite" operator="in" in2="blur"/>
+                                          <feBlend result="blend" in="SourceGraphic"/>
+                                        </filter>
+                                        <filter id="filter-7" x="39" y="437" width="168" height="147" filterUnits="userSpaceOnUse">
+                                          <feOffset result="offset" dx="2" in="SourceAlpha"/>
+                                          <feGaussianBlur result="blur" stdDeviation="2.236"/>
+                                          <feFlood result="flood" flood-opacity="0.35"/>
+                                          <feComposite result="composite" operator="in" in2="blur"/>
+                                          <feBlend result="blend" in="SourceGraphic"/>
+                                        </filter>
+                                      </defs>
+                                      <path id="Lake" class="cls-1" d="M883.565,415.253c2.517,5.792,3.386,10.479,1.2,12.751-3.983,4.129-15.048-3.16-22.72,1.159-7.388,4.158-9.3,16.039-8.371,24.342,1.1,9.8,8.669,15.833,7.175,23.184-1.89,9.3-16.145,15.728-44.241,21.05-38.269,7.25-75.576,3.862-88.491-.185-17.624-5.523-27.857-13.3-43.048-22.024C638.034,448.5,582.3,452.366,581.032,441.914c-2.139-17.608,132.075-47,220.024-64.914"/>
+                                      <text id="CONSUMER_1" data-name="CONSUMER 1" class="cls-2" x="86" y="419">CONSUMER 1</text>
+                                      <text id="CONSUMER_2" data-name="CONSUMER 2" class="cls-2" x="157" y="376">CONSUMER 2</text>
+                                      <text id="ASPIRING_1" data-name="ASPIRING 1" class="cls-2" x="237" y="321">ASPIRING 1</text>
+                                      <text id="ASPIRING_2" data-name="ASPIRING 2" class="cls-2" x="320" y="257">ASPIRING 2</text>
+                                      <text id="CAPABLE_1" data-name="CAPABLE 1" class="cls-2" x="416" y="182">CAPABLE 1</text>
+                                      <text id="CAPABLE_2" data-name="CAPABLE 2" class="cls-2" x="531" y="92">CAPABLE 2</text>
+                                      <text id="ANAYLTICS_LEADER" data-name="ANAYLTICS LEADER" class="cls-2" x="605" y="19">ANAYLTICS LEADER</text>
+                                      <path id="analyticsLeader" class="cls-3" d="M882,415.005L438.986,416.99l219.8-386.98Z"/>
+                                      <path id="capbale2" class="cls-4" d="M757,445.872l-389.452,1.747,193.224-340.61Z"/>
+                                      <path id="capable1" class="cls-5" d="M615.3,484.616l-329.392,1.478L449.335,198.029Z"/>
+                                      <path id="aspiring2" class="cls-6" d="M492.371,511.142l-274.024,1.227L354.3,273.1Z"/>
+                                      <path id="aspiring1" class="cls-7" d="M388.208,533.857l-230.856,1.034L271.89,333.152Z"/>
+                                      <path id="consumer2" class="cls-8" d="M290.615,556.566l-190.5.847,94.517-165.144Z"/>
+                                      <path id="consumer1" class="cls-9" d="M199.59,578.289L40.994,579,119.68,441.063Z"/>
+                                      <path id="Cloud_1_copy_4" data-name="Cloud 1 copy 4" class="cls-10" d="M125.728,509.984V510H53.479v-0.008c-0.109,0-.216.008-0.326,0.008a20.788,20.788,0,1,1,0-41.57,21.259,21.259,0,0,1,14.067,5.286,27.78,27.78,0,0,1,53.628,4.3,16.784,16.784,0,0,1,4.553-.634A16.3,16.3,0,1,1,125.728,509.984Z"/>
+                                      <path id="Cloud_1_copy_3" data-name="Cloud 1 copy 3" class="cls-10" d="M574.535,312.983V313h-77.5v-0.008c-0.112,0-.223.008-0.335,0.008a22.3,22.3,0,1,1,0-44.585,22.812,22.812,0,0,1,15.086,5.664,29.789,29.789,0,0,1,57.511,4.61A18.04,18.04,0,0,1,574.2,278,17.492,17.492,0,1,1,574.535,312.983Z"/>
+                                      <path id="Cloud_1_copy" data-name="Cloud 1 copy" class="cls-10" d="M278.5,203c-0.168,0-.333-0.01-0.5-0.013V203H167v-0.013a25.5,25.5,0,1,1,7.5-50,42.5,42.5,0,0,1,82.386-6.741A32.495,32.495,0,1,1,278.5,203Z"/>
+                                      <path id="Cloud_1_copy_2" data-name="Cloud 1 copy 2" class="cls-10" d="M778,150c-0.129,0-.256-0.008-0.385-0.01V150H692.231v-0.019A19.562,19.562,0,1,1,698,111.621a32.713,32.713,0,0,1,63.374-5.174A24.965,24.965,0,1,1,778,150Z"/>
+                                      <path id="Cloud_2_copy_2" data-name="Cloud 2 copy 2" class="cls-11" d="M335.909,229.936V230H231.8v-0.043a20.623,20.623,0,0,1-2.987-40.874,33.565,33.565,0,0,1,63.523-19.717A26.68,26.68,0,0,1,334.2,191.288c0,0.007,0,.015,0,0.022,0.147,0,.29-0.022.437-0.022A19.344,19.344,0,0,1,335.909,229.936Z"/>
+                                      <path id="Cloud_2_copy" data-name="Cloud 2 copy" class="cls-10" d="M602.621,182.953V183H525.65v-0.031a15.2,15.2,0,0,1-2.222-30.14A24.82,24.82,0,0,1,570.4,138.295a19.721,19.721,0,0,1,30.95,16.161v0.006c0.112,0,.222-0.017.335-0.017A14.268,14.268,0,0,1,602.621,182.953Z"/>
+                                      <text id="Get_you_up-to-_speed_with_analytics_at_JDI_" data-name="Get you up-to- speed with analytics  at JDI " class="cls-12" x="119" y="534.25"><tspan x="119">Get you up-to-</tspan><tspan x="119" dy="12">speed with analytics </tspan><tspan x="119" dy="12">at JDI</tspan></text>
+                                      <text id="Participants_will_be_challenged_with_more_self-study_" data-name="Participants will    be challenged with        more self-study," class="cls-13" x="233" y="438.25">Participants will<tspan x="233" dy="12">   be challenged with </tspan><tspan x="233" dy="12">      more self-study,</tspan><tspan x="233" dy="12">         formalized training,</tspan><tspan x="233" dy="12">            and an emphasis on</tspan><tspan x="233" dy="12">               proper data comm-</tspan><tspan x="233" dy="12">                  unication</tspan><tspan x="233" dy="12">      </tspan></text>
+                                      <text id="Participants_will_learn_to_formulate_analytical_probl" data-name="Participants will    learn to formulate        analytical probl" class="cls-13" x="322" y="400.25">Participants will<tspan x="322" dy="12">   learn to formulate </tspan><tspan x="322" dy="12">      analytical problems a</tspan><tspan x="322" dy="12">         and solve them with </tspan><tspan x="322" dy="12">            various technical tools </tspan><tspan x="322" dy="12">               and techniques</tspan><tspan x="322" dy="12">      </tspan></text>
+                                      <text id="Ask_the_right" data-name="Ask the right" class="cls-13" x="156.5" y="481.75">Ask the right</text>
+                                      <text id="questions_test" data-name="questions, test" class="cls-13" x="163.5" y="493.75">questions, test</text>
+                                      <text id="your_data_auditing" data-name="your data auditing" class="cls-13" x="169.5" y="505.75">your data auditing</text>
+                                      <text id="skills_and_improve" data-name="skills, and improve" class="cls-13" x="176.5" y="517.75">skills, and improve</text>
+                                      <text id="your_statistics_skills" data-name="your statistics skills" class="cls-13" x="182.5" y="529.75">your statistics skills</text>
+                                    </svg>
+                            
+                    </div>
                 </div>
             </div>
 

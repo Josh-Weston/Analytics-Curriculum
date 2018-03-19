@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="600" viewBox="0 0 900 600">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1 {
+        font-size: 11px;
+        font-family: JohnDoe;
+        font-weight: 700;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #001026;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        filter: url(#filter);
+      }
+
+      .cls-3 {
+        fill: #002940;
+        filter: url(#filter-2);
+      }
+
+      .cls-4 {
+        fill: #002e4f;
+        filter: url(#filter-3);
+      }
+
+      .cls-5 {
+        fill: #004f74;
+        filter: url(#filter-4);
+      }
+
+      .cls-6 {
+        fill: #00778e;
+        filter: url(#filter-5);
+      }
+
+      .cls-7 {
+        fill: #008f99;
+        filter: url(#filter-6);
+      }
+
+      .cls-8 {
+        fill: #00a5b6;
+        filter: url(#filter-7);
+      }
+    </style>
+    <filter id="filter" x="426" y="29" width="452" height="396" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="2" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.236"/>
+      <feFlood result="flood" flood-opacity="0.35"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="365" y="103" width="399" height="350" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="2" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.236"/>
+      <feFlood result="flood" flood-opacity="0.35"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-3" x="283" y="194" width="340" height="298" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="2" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.236"/>
+      <feFlood result="flood" flood-opacity="0.35"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-4" x="216" y="269" width="284" height="249" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="2" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.236"/>
+      <feFlood result="flood" flood-opacity="0.35"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-5" x="155" y="329" width="241" height="211" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="2" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.236"/>
+      <feFlood result="flood" flood-opacity="0.35"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-6" x="98" y="388" width="200" height="175" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="2" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.236"/>
+      <feFlood result="flood" flood-opacity="0.35"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+    <filter id="filter-7" x="39" y="437" width="168" height="147" filterUnits="userSpaceOnUse">
+      <feOffset result="offset" dx="2" in="SourceAlpha"/>
+      <feGaussianBlur result="blur" stdDeviation="2.236"/>
+      <feFlood result="flood" flood-opacity="0.35"/>
+      <feComposite result="composite" operator="in" in2="blur"/>
+      <feBlend result="blend" in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <text id="CONSUMER_1" data-name="CONSUMER 1" class="cls-1" x="86" y="419">CONSUMER 1</text>
+  <text id="CONSUMER_2" data-name="CONSUMER 2" class="cls-1" x="157" y="376">CONSUMER 2</text>
+  <text id="ASPIRING_1" data-name="ASPIRING 1" class="cls-1" x="237" y="321">ASPIRING 1</text>
+  <text id="ASPIRING_2" data-name="ASPIRING 2" class="cls-1" x="320" y="257">ASPIRING 2</text>
+  <text id="CAPABLE_1" data-name="CAPABLE 1" class="cls-1" x="416" y="182">CAPABLE 1</text>
+  <text id="CAPABLE_2" data-name="CAPABLE 2" class="cls-1" x="531" y="92">CAPABLE 2</text>
+  <text id="ANAYLTICS_LEADER" data-name="ANAYLTICS LEADER" class="cls-1" x="618" y="19">ANAYLTICS LEADER</text>
+  <path id="analyticsLeader" class="cls-2" d="M871,418.005L427.987,419.99l219.8-386.98Z"/>
+  <path id="capbale2" class="cls-3" d="M757,445.872l-389.452,1.747,193.224-340.61Z"/>
+  <path id="capable1" class="cls-4" d="M615.3,484.616l-329.392,1.478L449.335,198.03Z"/>
+  <path id="aspiring2" class="cls-5" d="M492.371,511.142l-274.024,1.227L354.3,273.1Z"/>
+  <path id="aspiring1" class="cls-6" d="M388.208,533.857l-230.856,1.034L271.89,333.152Z"/>
+  <path id="consumer2" class="cls-7" d="M290.615,556.566l-190.5.847,94.517-165.144Z"/>
+  <path id="consumer1" class="cls-8" d="M199.59,578.289L40.994,579,119.68,441.063Z"/>
+</svg>

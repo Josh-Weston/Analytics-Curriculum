@@ -126,7 +126,6 @@ just the SVG code */
     width: 295px;
     padding-top: 10%;
     text-align: center;
-    border: 1px solid red;
     vertical-align: top;
     height: 100%;
     display:none;
@@ -143,9 +142,21 @@ just the SVG code */
 #main-container-svg {
     width: 895px;
     display: inline-block;
-    border: 1px solid black;
     vertical-align: top;
     height: 100%;
+}
+
+#main-container-svg-flex {
+    display: flex;
+    align-self: center;
+    height: 100%;
+    width: 100%;
+}
+
+#main-container-svg-flex > svg {
+    align-self: center;
+    height: 100%;
+    width: 100%;
 }
 
 .svg-mountains {
@@ -164,4 +175,39 @@ just the SVG code */
     height: 300px;
     width: 100%;
     background-color: rgb(10, 10, 10);
+}
+
+#Cloud_1_copy, #Cloud_2_copy, #Cloud_1_copy_2 {
+    animation-duration: 10s;
+    animation-name: cloud1;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+#Cloud_2_copy_2, #Cloud_1_copy_3, #Cloud_1_copy_4 {
+    animation-duration: 10s;
+    animation-name: cloud2;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes cloud2 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(50px, 0px);
+    }
+}
+
+@keyframes cloud1 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(-50px, 0px);
+    }
 }
