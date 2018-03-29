@@ -1,9 +1,15 @@
 .registration-card {
     width: 700px;
     margin: 0 auto;
-    box-shadow: 1px 2px 5px 0px rgba(0,0,0,.2);
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px 0px 20px;
+}
+
+.registration-card:first-child {
     margin-top: 50px;
+}
+
+.registration-card:not(:first-child) {
+    margin-top: 25px;
 }
 
 .registration-logo {

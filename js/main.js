@@ -4,7 +4,7 @@ class VM {
 
     constructor(gui) {
         this.gui = gui;
-        this.fetchProfile(false);
+        this.fetchProfile(true);
 
         if (navigator.userAgent.indexOf('Chrome/') < 0) {
             this.gui.showBrowserWarning();
@@ -14,7 +14,7 @@ class VM {
     fetchProfile(profileExists) {
         if (profileExists) {
             this.gui.removeSignup();
-            this.gui.welcomeBack();
+            //this.gui.welcomeBack();
         } else {
             this.gui.showSignup();
         }
@@ -103,7 +103,7 @@ class GUI {
         const signup = document.querySelector('#main-container-signup');
         document.querySelector('#main-container-illustration').removeChild(signup);
         document.querySelector('#main-container-svg').style.width = "1200px";
-        document.querySelector('#svg-mountain-parent').style.width = "1200px";
+        //document.querySelector('#svg-mountain-parent').style.width = "1200px";
     }
 
     showSignup() {
@@ -115,6 +115,7 @@ class GUI {
 import {EventGateway} from './eventgateway.js';
 import {CourseMap} from './coursemap.js';
 import {Schedule} from './schedule.js';
+import {Skills} from './skills.js';
 
 let gateway = new EventGateway();
 var gui = new GUI(gateway);
@@ -123,4 +124,5 @@ gui.vm = vm;
 
 let courseMap = new CourseMap(gateway);
 let schedule = new Schedule(gateway);
+let skills = new Skills(gateway);
 

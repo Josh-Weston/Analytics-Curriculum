@@ -15,6 +15,8 @@ export class EventGateway {
                     break;
                 case 'skillsview':
                     this.emit('changeView', 'skills');
+                case 'skillselect':
+                    this.emit('changeSkill', e.target.dataset['skillselect']);
                 case 'avatar':
                     this.emit('selectAvatar', e.target);
                     break;

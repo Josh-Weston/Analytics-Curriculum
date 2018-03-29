@@ -42,8 +42,8 @@
 
 #flex-container-contents {
     flex-grow: 3;
-    overflow-y: scroll;
     width: 0;
+    margin-bottom: 20px;
 }
 
 #flex-container-contents > div:first-child {
@@ -51,4 +51,98 @@
     font-family: var(--font-family);
     padding: 32px 48px;
     background: linear-gradient(135deg, #6d50a2 0%, #ed2b88 100%);
+}
+
+#skills-main-container {
+    width: 100%;
+    padding-top:20px;
+}
+
+.path-description-card {
+    width: 750px;
+    margin: 0 auto;
+    padding: 20px 10px 10px 20px;
+    position: relative;
+}
+
+.path-description-card .description-card-summary {
+    padding-top: 10px;
+    border-bottom: 2px solid #a0a0a0;
+    min-height: 150px;
+}
+
+.description-card-side-color {
+    border-width: 0px 0px 0px 3px;
+    border-style: solid;
+    height: 50px;
+    position: absolute;
+    left: -2px;
+    top: 10px;
+}
+
+.path-description-footer {
+    display: flex;
+    width: 100%;
+}
+
+.path-description-footer > div {
+    flex-grow: 1;
+    color: #a0a0a0;
+    font-weight: 600;
+}
+
+.path-description-footer > div:nth-child(2) {
+    text-align: center;
+}
+
+.path-description-footer > div:last-child {
+    text-align: right;
+}
+
+.path-description-footer > div span:first-child {
+    color: var(--red);
+    margin-right: 5px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.path-description-card:not(:first-child) {
+    margin-top: 50px;
+}
+
+.path-description-card-materials {
+    margin: 20px 0px 20px 0px;
+    padding: 0;
+}
+
+.path-description-card-materials li {
+    font-weight: bold;
+    color: #5a5d75;
+    border-left: 2px solid #5a5d75;
+    background: #e9eaed;
+    width: 85%;
+    display: block;
+    padding: 14px;
+    margin: 0 auto;
+    margin-top: 10px;
+    min-height: 84px;
+    
+}
+
+.path-description-card-materials--img {
+    background: rgba(90,93,117,.32);
+    margin-left: 14px;
+    width: 56px;
+    height: 56px;
+    padding: 14px;
+    margin-top: 0;
+    margin-right: 14px;
+    border-radius: 50%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.path-description-card-materials--text {
+    vertical-align: middle;
+    display: inline-block;
 }
