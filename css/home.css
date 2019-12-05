@@ -1,0 +1,240 @@
+/* TODO: Place in separate CSS file */
+/* TODO: Switch to flexbox */
+#main-container-illustration {
+    height: 100%;
+    min-height: 580px;
+    max-height: 800px;
+    margin-top: 50px;
+}
+
+.main-container-avatar {
+    height: 132px;
+    width: 140px;
+    transition: transform .15s ease-in-out, opacity .2s ease-in;
+}
+
+.main-container-avatar:hover {
+    cursor: pointer;
+    transform: scale(1.2); /*TODO: Make the other avatar scale down as well, do we don't take-up so much space */
+}
+
+.main-container-avatar--notselected {
+    opacity: .2;
+}
+
+#main-container-signup {
+    width: 295px;
+    padding-top: 10%;
+    text-align: center;
+    vertical-align: top;
+    height: 100%;
+    display:none;
+}
+
+#main-container-signup > span {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+    font-family: var(--cursive-font);
+    font-size: 32px;
+}
+
+#main-container-svg {
+    width: 895px;
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+}
+
+#main-container-svg-flex {
+    display: flex;
+    align-self: center;
+    height: 100%;
+    width: 100%;
+}
+
+#main-container-svg-flex > svg {
+    align-self: center;
+    height: 100%;
+    width: 100%;
+}
+
+.svg-mountains {
+    fill: blue;
+}
+
+#mountain-1 {
+    transform: translate(0px, 100px);
+}
+
+#mountain-2 {
+    transform: translate(50px, 80px);
+}
+
+#Cloud_1_copy, #Cloud_2_copy, #Cloud_1_copy_2 {
+    animation-duration: 10s;
+    animation-name: cloud1;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+#Cloud_2_copy_2, #Cloud_1_copy_3, #Cloud_1_copy_4 {
+    animation-duration: 10s;
+    animation-name: cloud2;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#svg-title {
+    font-family: var(--cursive-font);
+    font-size: 40px;
+}
+
+.mountain-g {
+    transition: all .15s linear;
+    cursor: pointer;
+}
+
+#consumer1g {
+    transform-origin: 100px 500px;
+}
+
+#consumer2g {
+    transform-origin: 180px 500px;
+}
+
+#aspiring1g {
+    transform-origin: 250px 500px;
+}
+
+#aspiring2g {
+    transform-origin: 350px 500px;
+}
+
+#capable1g {
+    transform-origin: 450px 500px;
+}
+
+#capable2g {
+    transform-origin: 550px 500px;
+}
+
+#analyticsleaderg {
+    transform-origin: 650px 500px;
+}
+
+#consumer2g:hover, #consumer1g:hover, #aspiring1g:hover, #aspiring2g:hover, #capable1g:hover, #capable2g:hover {
+    transform: scale(1.1, 1.1);
+}
+
+#analyticsleaderg:hover {
+    transform: scale(1.02, 1.02);
+}
+
+#landing-stats {
+    display: flex;
+    height: 200px;
+    margin-top: 100px;
+}
+
+.landing-stats-cards {
+    flex-grow: 1;
+    padding: 0px 20px 0px 20px;
+    margin: 20px 10px 20px 10px;
+    text-align: center;
+}
+
+.landing-stats-cards--number {
+    font-size: 80px;
+    font-family: var(--cursive-font);
+    line-height: 90px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+#landing-program-info {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.landing-program--text {
+    width: 60%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.landing-program--section {
+    height: 300px;
+}
+
+.landing-program--image {
+    width: 40%;
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+#landing-program--bulb {
+    height: 100%;
+    background-image: url("/../img/bulb_72ppi.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+#landing-program-faq--list {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.landing-program-faq-li:not(:first-child) {
+    margin-top: 40px;
+}
+
+.faq-link {
+    cursor: pointer;
+    color: #0072c6;
+    font-weight: bold;
+    transition: all .2s ease;
+}
+
+.faq-link:hover {
+    color: #0095ff
+}
+
+#landing-program-faq--principles li:not(:first-child) {
+    margin-top: 12px;
+}
+
+#svg-subtitle tspan {
+    fill: #0072c6;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+#svg-subtitle tspan:hover {
+    fill: #0095ff
+}
+
+
+@keyframes cloud2 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(50px, 0px);
+    }
+}
+
+@keyframes cloud1 {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(-50px, 0px);
+    }
+}

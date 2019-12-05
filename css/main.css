@@ -55,9 +55,7 @@ html, body {
     position: relative;
 }
 
-/* TODO: Mousehover not working on objects. May need to replace objects with
-just the SVG code */
-.unstyle-list > li:hover {
+#top-bar-links > li:hover {
     cursor: pointer;
     background-color: #eff0f1;
 }
@@ -93,127 +91,14 @@ just the SVG code */
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    height: calc(100% - 50px);
+    /* height: calc(100% - 50px); */
     transition: opacity .5s ease;
+    margin-bottom: 20px;
 }
 
 #main-container-spacer {
     width: 100%;
     height: 50px;
-}
-
-/* TODO: Place in separate CSS file */
-/* TODO: Switch to flexbox */
-#main-container-illustration {
-    height: 100%;
-    min-height: 580px;
-    max-height: 800px;
-}
-
-.main-container-avatar {
-    height: 132px;
-    width: 140px;
-    transition: transform .15s ease-in-out, opacity .2s ease-in;
-}
-
-.main-container-avatar:hover {
-    cursor: pointer;
-    transform: scale(1.2); /*TODO: Make the other avatar scale down as well, do we don't take-up so much space */
-}
-
-.main-container-avatar--notselected {
-    opacity: .2;
-}
-
-#main-container-signup {
-    width: 295px;
-    padding-top: 10%;
-    text-align: center;
-    vertical-align: top;
-    height: 100%;
-    display:none;
-}
-
-#main-container-signup > span {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: inline-block;
-    font-family: var(--cursive-font);
-    font-size: 32px;
-}
-
-#main-container-svg {
-    width: 895px;
-    display: inline-block;
-    vertical-align: top;
-    height: 100%;
-}
-
-#main-container-svg-flex {
-    display: flex;
-    align-self: center;
-    height: 100%;
-    width: 100%;
-}
-
-#main-container-svg-flex > svg {
-    align-self: center;
-    height: 100%;
-    width: 100%;
-}
-
-.svg-mountains {
-    fill: blue;
-}
-
-#mountain-1 {
-    transform: translate(0px, 100px);
-}
-
-#mountain-2 {
-    transform: translate(50px, 80px);
-}
-
-#landing-stats {
-    height: 300px;
-    width: 100%;
-    background-color: rgb(10, 10, 10);
-}
-
-#Cloud_1_copy, #Cloud_2_copy, #Cloud_1_copy_2 {
-    animation-duration: 10s;
-    animation-name: cloud1;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in-out;
-}
-
-#Cloud_2_copy_2, #Cloud_1_copy_3, #Cloud_1_copy_4 {
-    animation-duration: 10s;
-    animation-name: cloud2;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-#svg-title {
-    font-family: var(--cursive-font);
-    font-size: 40px;
-}
-
-#consumer2g {
-    transform-origin: 150px 500px;
-    transition: all .15s linear;
-    cursor: pointer;
-}
-
-#consumer1g {
-    transform-origin: 100px 500px;
-    transition: all .15s linear;
-    cursor: pointer;
-}
-
-#consumer2g:hover, #consumer1g:hover {
-    transform: scale(1.1, 1.1);
 }
 
 .comingsoon {
@@ -227,24 +112,4 @@ just the SVG code */
 .resting-card {
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
     background-color: white;
-}
-
-@keyframes cloud2 {
-    from {
-        transform: translate(0, 0);
-    }
-
-    to {
-        transform: translate(50px, 0px);
-    }
-}
-
-@keyframes cloud1 {
-    from {
-        transform: translate(0, 0);
-    }
-
-    to {
-        transform: translate(-50px, 0px);
-    }
 }

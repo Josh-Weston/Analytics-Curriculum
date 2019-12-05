@@ -3,7 +3,7 @@ export class EventGateway {
     constructor() {
         this.listeners = new Map();
         document.addEventListener('click', e => {
-
+            
             //TODO: This needs to be more robust because the event
             //won't fire if the user clicks on text.
             switch (Object.keys(e.target.dataset)[0]) {
